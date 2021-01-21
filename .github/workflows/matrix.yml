@@ -11,20 +11,21 @@ on:
 # A workflow run is made up of one or more jobs that can run sequentially or in parallel
 jobs:
   # This workflow contains a single job called "build"
-  monjob:
-    runs-on: ${{ matrix.os }}
+  build:
+    runs-on: ubuntu-latest
     strategy:
       matrix:
-        os: [ubuntu-latest, windows-latest, macos-latest]
-        node: [10, 12]
+        os: [A, B, C]
+        node: [1, 2]
         include:
-          - os: macos-latest
-            node: 8
+          - os: C
+            node: 3
         exclude:
-          - os: macos-latest
-            node: 10
-          - os: macos-latest
-            node: 8
+          - os: C
+            node: 2
+          - os: C
+            node: 3
+
 
     # Steps represent a sequence of tasks that will be executed as part of the job
     steps:
