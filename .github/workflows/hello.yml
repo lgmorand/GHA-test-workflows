@@ -20,4 +20,4 @@ jobs:
       # Checks-out your repository under $GITHUB_WORKSPACE, so your job can access it
       - uses: lgmorand/github-action-hello@v1
         with:
-          who: 'Louis-Guillaume' 
+          prenom: 'Louis-Guillaume' 
