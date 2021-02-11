@@ -10,9 +10,9 @@ jobs:
       - run: |
           dayOfWeek=$(date +%u)
           if($dayOfWeek>5)
-          {
+          then
             exit 1
-          }
+          fi
   job2:
     runs-on: ubuntu-latest
     needs: job1
