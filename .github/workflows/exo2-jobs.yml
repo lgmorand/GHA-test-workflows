@@ -1,27 +1,24 @@
-name: jobs - exercice 2
+name: jobs - exercice 1
 
 on:
   workflow_dispatch:
 
 jobs:
-  job1:
+  job1:                    # se lance à tout moment
     runs-on: ubuntu-latest
     steps:
-      - run: |
-          dayOfWeek=$(date +%u)
-          if($dayOfWeek>5)
-          then
-            exit 1
-          fi
+    - run: echo "Bonjour"
   job2:
+    needs: job1            # se lance après que job1 ait terminé
     runs-on: ubuntu-latest
-    needs: job1
-    if: failure()
     steps:
-      - run: echo job2
+    - run: echo "Comment"
   job3:
+    needs: [job1, job2]   # se lance après que job1 ET job2 aient terminé
     runs-on: ubuntu-latest
-    needs: job2
-    if: always()
     steps:
-      - run: echo job3
+    - run: echo "ca va"
+  job4:                   # se lance à tout moment
+    runs-on: ubuntu-latest
+    steps:
+    - run: echo "vous ?"
