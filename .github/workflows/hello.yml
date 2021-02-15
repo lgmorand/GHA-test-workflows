@@ -22,3 +22,4 @@ jobs:
         with:
           prenom: 'Louis-Guillaume' 
           prenom2: 'toto'
+      - run: echo '::warning Version deprecated, please use V2' 
