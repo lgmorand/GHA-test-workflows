@@ -22,4 +22,5 @@ jobs:
         with:
           prenom: 'Louis-Guillaume' 
           prenom2: 'toto'
-      - run: echo '::warning Version deprecated, please use V2' 
+      - run: echo "::warning file=app.js,line=1,col=5::Missing semicolon"
+
