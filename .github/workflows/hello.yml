@@ -18,9 +18,7 @@ jobs:
     # Steps represent a sequence of tasks that will be executed as part of the job
     steps:
       # Checks-out your repository under $GITHUB_WORKSPACE, so your job can access it
-      - uses: lgmorand/github-action-hello@v2
+      - uses: lgmorand/github-action-hello@v3
         with:
           prenom: 'Louis-Guillaume' 
           prenom2: 'toto'
-      - run: echo "::warning file=app.js,line=1,col=5::Missing semicolon"
-
