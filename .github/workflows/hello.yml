@@ -15,14 +15,14 @@ jobs:
   build:
     runs-on: ubuntu-latest
     env:
-      MA_VARIABLE_PRENOM: ${{env.GITHUB_WORKFLOW}}
+      MA_VARIABLE_PRENOM: ${env.GITHUB_WORKFLOW}
       MA_VAR: ${{github.workflow}}
 
 
     # Steps represent a sequence of tasks that will be executed as part of the job
     steps:
       # Checks-out your repository under $GITHUB_WORKSPACE, so your job can access it
-      - run: echo "${{env.GITHUB_WORKFLOW}}"
+      - run: echo "${env.GITHUB_WORKFLOW}"
       - run: echo "${{env.MA_VARIABLE_PRENOM}}"
       - run: echo "${{env.MA_VAR}}"
       - uses: lgmorand/github-action-hello@v5
