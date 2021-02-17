@@ -16,6 +16,10 @@ jobs:
     env:
       MA_VARIABLE_PRENOM: Jean
       MA_VARIABLE_NOM: "Du pont"
+      MA_VARIABLE_MULTILIGNE: |
+                            bonjour
+                            à tous
+                            !
 
     # Steps represent a sequence of tasks that will be executed as part of the job
     steps:
