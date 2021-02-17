@@ -13,11 +13,14 @@ jobs:
   # This workflow contains a single job called "build"
   build:
     runs-on: ubuntu-latest
-
+    env:
+      MA_VARIABLE_PRENOM: Jean
+      MA_VARIABLE_NOM: Du pont
 
     # Steps represent a sequence of tasks that will be executed as part of the job
     steps:
       # Checks-out your repository under $GITHUB_WORKSPACE, so your job can access it
+      - run: echo ${{env.MA_VARIABLE_NOM}}
       - uses: lgmorand/github-action-hello@v5
         with:
           prenom: 'Louis-Guillaume' 
