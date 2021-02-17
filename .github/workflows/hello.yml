@@ -22,6 +22,7 @@ jobs:
     steps:
       # Checks-out your repository under $GITHUB_WORKSPACE, so your job can access it
       - run: echo "${GITHUB_WORKFLOW}"
+      - run: echo "${{GITHUB_WORKFLOW}}"
       - run: echo "${{env.MA_VAR}}"
       - uses: lgmorand/github-action-hello@v5
         with:
