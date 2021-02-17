@@ -22,7 +22,7 @@ jobs:
     # Steps represent a sequence of tasks that will be executed as part of the job
     steps:
       # Checks-out your repository under $GITHUB_WORKSPACE, so your job can access it
-      - run: echo "${env.GITHUB_WORKFLOW}"
+      - run: echo "${GITHUB_WORKFLOW}"
       - run: echo "${{env.MA_VARIABLE_PRENOM}}"
       - run: echo "${{env.MA_VAR}}"
       - uses: lgmorand/github-action-hello@v5
