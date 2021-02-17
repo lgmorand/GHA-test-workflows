@@ -25,6 +25,8 @@ jobs:
     steps:
       # Checks-out your repository under $GITHUB_WORKSPACE, so your job can access it
       - run: echo "${{env.MA_VARIABLE_MULTILIGNE}}"
+      - run: echo ${{GITHUB_HEAD_REF}}
+      - run: echo ${{GITHUB_BASE_REF}}
       - uses: lgmorand/github-action-hello@v5
         with:
           prenom: 'Louis-Guillaume' 
