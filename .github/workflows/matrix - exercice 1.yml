@@ -9,16 +9,16 @@ jobs:
       matrix:
         dotnet: [4.2.x, 5.0.x]
         buildMode: [Debug, Release]
-  steps:
-    - name: Recupère le code source
-      uses: actions/checkout@v2
-    - name: Install .NET
-      uses: actions/setup-dotnet@v1
-      with:
-        dotnet-version: ${{ matrix.dotnet }}
-    - name: Restore dependencies
-      run: dotnet restore
-    - name: Build
-      run: dotnet build --no-restore --configuration ${{ env.buildMode }}
-      env:
-        - buildMode: ${{ matrix.buildMode }}
+    steps:
+      - name: Recupère le code source
+        uses: actions/checkout@v2
+      - name: Install .NET
+        uses: actions/setup-dotnet@v1
+        with:
+          dotnet-version: ${{ matrix.dotnet }}
+      - name: Restore dependencies
+        run: dotnet restore
+      - name: Build
+        run: dotnet build --no-restore --configuration ${{ env.buildMode }}
+        env:
+          - buildMode: ${{ matrix.buildMode }}
