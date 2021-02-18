@@ -1,4 +1,5 @@
 name: "matrix - exercice 2"
+
 on:
   workflow_dispatch:
   
@@ -17,3 +18,5 @@ jobs:
             node: 10
           - os: macos-latest
             node: 8
+    steps:
+    - run: echo "Je m'execute sur ${{ matrix.os }} avec la version Node ${{ matrix.node }}"
