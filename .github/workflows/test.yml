@@ -15,7 +15,7 @@ jobs:
     
     steps:
     - name: Nom du workflow
-      run: echo ${{ toJson(github) }}
+      run: echo "${{ toJson(github) }}"
     - name: Nom du workflow
       run: echo ${{ github.workflow }} 
     - name: URL du profil du owner du repository
