@@ -12,10 +12,12 @@ jobs:
   # This workflow contains a single job called "build"
   build:
     runs-on: ubuntu-latest
+    env:
+      toto: tete
     
     steps:
     - name: Nom du workflow
-      run: echo "${{ toJson(github) }}"
+      run: echo "${{ toJson(env) }}"
     - name: Nom du workflow
       run: echo ${{ github.workflow }} 
     - name: URL du profil du owner du repository
