@@ -15,9 +15,14 @@ jobs:
     
     steps:
     - name: Nom du workflow
-      run: echo ${{ github }}
+      run: echo ${{ toJson(github) }}
     - name: Nom du workflow
       run: echo ${{ github.workflow }} 
+    - name: URL du profil du owner du repository
+      run: echo ${{ github.event.repository.owner.html_url }} 
+    - name: URL du profile du owner du repository
+      run:  echo "::warning::Ce repository est public!"
+      if: ${{ github.event.repository.private == 'false' }}
     - name: Dump GitHub context
       env:
         GITHUB_CONTEXT: ${{ toJson(github) }}
