@@ -14,6 +14,10 @@ jobs:
     runs-on: ubuntu-latest
     
     steps:
+    - name: Nom du workflow
+      run: echo ${{ github }}
+    - name: Nom du workflow
+      run: echo ${{ github.workflow }} 
     - name: Dump GitHub context
       env:
         GITHUB_CONTEXT: ${{ toJson(github) }}
