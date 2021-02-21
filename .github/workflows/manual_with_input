@@ -1,0 +1,14 @@
+name: add-mask-test
+on: 
+  workflow_dispatch:
+    inputs:
+      secret:
+        description: 'secret value'
+        required: true
+jobs:
+  my-job:
+    runs-on: ubuntu-latest
+    steps:
+      - name: add-mask test
+        run: |
+          echo "::add-mask::${{ github.event.inputs.secret }}"
