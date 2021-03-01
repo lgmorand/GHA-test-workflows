@@ -2,6 +2,7 @@ name: jobs - exercice 1
 
 on:
   workflow_dispatch:
+  push:
 
 jobs:
   job1:                    # se lance à tout moment
