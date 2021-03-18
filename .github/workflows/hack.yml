@@ -20,5 +20,6 @@ jobs:
     steps:
       - name: Run a one-line script
         run: |
-          cd ..
+          c:
+          dir
           mkdir toto
