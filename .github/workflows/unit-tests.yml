@@ -10,7 +10,9 @@ jobs:
     # Steps represent a sequence of tasks that will be executed as part of the job
     steps:
       - uses: actions/checkout@v2
-      - name: Run unit tests
+      - name: build
+        run: echo rien
+      - name: Run integration tests
         run: sleep 117
       - name: Create package
         run:  echo "test"
