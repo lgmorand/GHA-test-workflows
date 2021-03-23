@@ -1,0 +1,16 @@
+name: Units tests
+on:
+
+  workflow_dispatch:
+
+jobs:
+  mon-project:
+    runs-on: ubuntu-latest
+
+    # Steps represent a sequence of tasks that will be executed as part of the job
+    steps:
+      - uses: actions/checkout@v2
+      - name: Run a one-line script
+        run: sleep 25
+      - name: Create package
+        run:  echo "test"
