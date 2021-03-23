@@ -12,6 +12,7 @@ jobs:
         run: echo rien
   testing:
     runs-on: ubuntu-latest
+    needs: build
     strategy:
       matrix:
         test-path: 
@@ -24,6 +25,7 @@ jobs:
         run: sleep 25
   packing:
     runs-on: ubuntu-latest
+    needs: testing
     steps:
       - name: Create package
         run:  echo "test"
