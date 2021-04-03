@@ -1,0 +1,24 @@
+
+name: Artifact
+
+on:
+  workflow_dispatch:
+
+jobs:
+  build:
+    runs-on: ubuntu-latest
+    steps:
+     - uses: |
+        mkdir logs
+        touch logs/test.txt
+        touch mon-application.exe
+     - name: Archivage des binaires de l'application
+       uses: actions/upload-artifact@v2
+       with: 
+        path: mon-application.exe # prend et zip un fichier particulier
+        name: Release             # et l'upload en tant que Release.zip
+     - name: Archivage des logs techniques
+       uses: actions/upload-artifact@v2
+       with:
+        path: /logs               # prend tous les fichiers du dossier logs
+        name: logs                # et les upload dans un fichier logs.zip
