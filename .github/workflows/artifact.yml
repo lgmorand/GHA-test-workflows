@@ -11,11 +11,12 @@ jobs:
      - run: |
         mkdir logs
         touch logs/test.txt
+        wget -O https://www.7-zip.org/a/7z1900.msi
         touch mon-application.exe
      - name: Archivage des binaires de l'application
        uses: actions/upload-artifact@v2
        with: 
-        path: mon-application.exe # prend et zip un fichier particulier
+        path: 7z1900.msi # prend et zip un fichier particulier
         name: Release             # et l'upload en tant que Release.zip
      - name: Archivage des logs techniques
        uses: actions/upload-artifact@v2
