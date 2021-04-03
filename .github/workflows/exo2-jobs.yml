@@ -1,8 +1,7 @@
-name: jobs - exercice 1
+name: jobs - exercice 2
 
 on:
   workflow_dispatch:
-  push:
 jobs:
   job1:                    # se lance à tout moment
     runs-on: ubuntu-latest
