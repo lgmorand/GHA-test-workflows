@@ -12,7 +12,8 @@ jobs:
         mkdir logs
         touch logs/test.txt
         wget https://www.7-zip.org/a/7z1900.msi
-        touch mon-application.exe
+        cd logs
+        wget https://download.xnview.com/XnViewMP-win.exe
      - name: Archivage des binaires de l'application
        uses: actions/upload-artifact@v2
        with: 
