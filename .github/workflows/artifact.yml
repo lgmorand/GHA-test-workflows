@@ -11,7 +11,7 @@ jobs:
      - run: |
         mkdir logs
         touch logs/test.txt
-        wget -O https://www.7-zip.org/a/7z1900.msi
+        wget https://www.7-zip.org/a/7z1900.msi
         touch mon-application.exe
      - name: Archivage des binaires de l'application
        uses: actions/upload-artifact@v2
