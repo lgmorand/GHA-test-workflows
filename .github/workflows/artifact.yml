@@ -20,5 +20,5 @@ jobs:
      - name: Archivage des logs techniques
        uses: actions/upload-artifact@v2
        with:
-        path: /logs               # prend tous les fichiers du dossier logs
+        path: logs               # prend tous les fichiers du dossier logs
         name: logs                # et les upload dans un fichier logs.zip
