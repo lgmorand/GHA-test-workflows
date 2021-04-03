@@ -8,7 +8,7 @@ jobs:
   build:
     runs-on: ubuntu-latest
     steps:
-     - uses: |
+     - runs: |
         mkdir logs
         touch logs/test.txt
         touch mon-application.exe
