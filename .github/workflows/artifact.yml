@@ -24,3 +24,13 @@ jobs:
        with:
         path: logs               # prend tous les fichiers du dossier logs
         name: logs                # et les upload dans un fichier logs.zip
+  test:
+    runs-on: ubuntu-latest
+    steps:
+    - name: Téléchargement de l'artéfact
+      uses: actions/download-artifact@v2
+      with:
+       name: logs
+    - run: ls
+   
+
