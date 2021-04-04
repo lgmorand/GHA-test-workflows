@@ -13,6 +13,8 @@ jobs:
        working-directory: DemoNuget
      - run: nuget sources add -name "github" -Source https://nuget.pkg.github.com/lgmorand/index.json -Username lgmorand -Password ${{ secrets.GITHUB_TOKEN }}
        working-directory: DemoNuget
+     - run: cat nuget.config
+       working-directory: DemoNuget
      - run: dotnet nuget push "bin/Release/DemoNuget.1.0.0.nupkg" --source "github" 
        working-directory: DemoNuget
    
