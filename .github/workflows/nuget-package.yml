@@ -11,7 +11,9 @@ jobs:
      - uses: actions/checkout@v2
      - run: dotnet pack --configuration Release 
        working-directory: DemoNuget
-     - run: dotnet nuget push "bin/Release/DemoNuget.1.0.0.nupkg"  --api-key ${{ secrets.GITHUB_TOKEN }} --source "github"
+     - run: nuget sources add -name "GPR" -Source https://nuget.pkg.github.com/lgmorand/index.json -Username lgmorand -Password ${{ secrets.GITHUB_TOKEN }}
+       working-directory: DemoNuget
+     - run: dotnet nuget push "bin/Release/DemoNuget.1.0.0.nupkg" --source "github" 
        working-directory: DemoNuget
    
 
