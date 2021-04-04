@@ -26,6 +26,7 @@ jobs:
         name: logs                # et les upload dans un fichier logs.zip
   test:
     runs-on: ubuntu-latest
+    needs: build
     steps:
     - name: Téléchargement de l'artéfact
       uses: actions/download-artifact@v2
