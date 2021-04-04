@@ -10,8 +10,8 @@ jobs:
     steps:
      - uses: actions/checkout@v2
      - run: dotnet pack --configuration Release
-       working-directory: /nuget
+       working-directory: /DemoNuget
      - run: dotnet nuget push "bin/Release/OctocatApp.1.0.0.nupkg"  --api-key ${{ secrets.GITHUB_TOKEN }} --source "github"
-       working-directory: /nuget
+       working-directory: /DemoNuget
    
 
