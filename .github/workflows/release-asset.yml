@@ -1,6 +1,7 @@
 name: Release Asset
 on:
   workflow_dispatch:
+  push:
 jobs:
   # This workflow contains a single job called "build"
   build:
@@ -19,6 +20,7 @@ jobs:
 
       - name: Release
         uses: softprops/action-gh-release@v1
+        if: startsWith(github.ref, 'refs/tags/')
         env:
           GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
         with:
