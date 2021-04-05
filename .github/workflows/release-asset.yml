@@ -1,11 +1,6 @@
-# This is a basic workflow to help you get started with Actions
-
 name: Release Asset
-
 on:
   workflow_dispatch:
-
-
 jobs:
   # This workflow contains a single job called "build"
   build:
@@ -27,4 +22,7 @@ jobs:
         env:
           GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
         with:
-          files: Release.txt
+          files: |
+            MonApplication.windows.x86.msi
+            MonApplication.windows.x64.msi
+            MonApplication.linux.tgz
