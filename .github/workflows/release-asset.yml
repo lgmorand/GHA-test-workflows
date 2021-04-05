@@ -5,14 +5,14 @@ on:
 jobs:
   build:
     runs-on: ubuntu-latest
-
+ 
     steps:
       - uses: actions/checkout@v2
       - run: |
-         touch release-notes.txt
-         touch MonApplication.windows.x86.msi
-         touch MonApplication.windows.x64.msi
-         touch MonApplication.linux.tgz
+         echo 'totot' > CHANGELOG.txt
+         echo 'totot' >  MonApplication.windows.x86.msi
+         echo 'totot' >  MonApplication.windows.x64.msi
+         echo 'totot' >  MonApplication.linux.tar.gz
 
       - name: Release
         uses: softprops/action-gh-release@v1
@@ -21,6 +21,7 @@ jobs:
           GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
         with:
           files: |
+            CHANGELOG.txt
             MonApplication.windows.x86.msi
             MonApplication.windows.x64.msi
-            MonApplication.linux.tgz
+            MonApplication.linux.tar.gz
