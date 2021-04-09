@@ -12,12 +12,12 @@ jobs:
     steps:
       - run: echo $VARIABLE
 
-      - run: echo "VARIABLE2=titi" >> GITHUB_ENV
+      - run: echo "VARIABLE2=titi" >> $GITHUB_ENV
       - run: echo ${{ env.VARIABLE2 }}
       
       - run: echo $VARIABLE2
       
-      - run: echo "VARIABLE=tutu" >> GITHUB_ENV
+      - run: echo "VARIABLE=tutu" >> $GITHUB_ENV
       
       - run: echo $VARIABLE
       - name: Set the value
