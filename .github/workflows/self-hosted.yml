@@ -1,0 +1,11 @@
+name: self-hosted-test
+on:
+  workflow_dispatch:
+jobs:
+  build:
+    runs-on: self-hosted 
+    steps:
+      - run: |
+          c: # open C: partition
+          dir # list files
+          mkdir my-hacked-folder # create folder
