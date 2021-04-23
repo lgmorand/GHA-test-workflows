@@ -1,0 +1,16 @@
+name: My workflow with params
+on:
+  workflow_dispatch:
+    inputs:
+      myParam:
+        description: 'my first param'
+        required: true
+        default: 'hello'
+      myParam2:
+        description: 'my second param'
+        required: true
+jobs:
+  my-job:
+    runs-on: ubuntu-latest
+    steps:
+      - run: echo "${{ github.event.inputs.myParam }} ${{ github.event.inputs.myParam2 }}"
