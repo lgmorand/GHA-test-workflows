@@ -1,0 +1,12 @@
+name: variables - exercice 1
+
+on:
+  workflow_dispatch:
+  
+jobs:
+  job1: 
+    runs-on: ubuntu-latest
+    steps:
+    - id: monStep
+      run: echo "::set-output name=NOMVARIABLE::$MAVARIABLE"
+    - run: echo ${{ steps.monStep.output.NOMVARIABLE}}
