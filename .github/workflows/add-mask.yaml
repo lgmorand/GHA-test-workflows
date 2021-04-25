@@ -1,0 +1,15 @@
+name: add-mask
+
+on:
+  workflow_dispatch:
+
+jobs:
+  build:
+    runs-on: ubuntu-latest
+    env:
+      VAR1: hello
+      VAR2: hello2
+    steps:
+     - run: echo "::add-mask::$VAR1"
+     - run: echo $VAR1
+     - run: echo $VAR2
