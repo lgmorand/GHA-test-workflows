@@ -8,5 +8,5 @@ jobs:
     runs-on: ubuntu-latest
     steps:
     - id: monStep
-      run: echo "::set-output name=NOMVARIABLE::$MAVARIABLE"
+      run: echo "::set-output name=NOMVARIABLE::toto"
     - run: echo ${{ steps.monStep.output.NOMVARIABLE}}
