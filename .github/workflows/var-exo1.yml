@@ -12,5 +12,6 @@ jobs:
     steps:
     - run: |
         VARTMP=$VAR1
-        echo 'VAR2=$VARTMP' >> $GITHUB_ENV 
+        echo $VARTMP
+        echo "VAR2=$VARTMP" >> $GITHUB_ENV 
     - run: echo $VAR2
