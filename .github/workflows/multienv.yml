@@ -10,7 +10,7 @@ jobs:
     steps:
       - run: echo DEV
   job2:
-    name: Recette
+    name: Testing
     needs: job1
     runs-on: ubuntu-latest
     environment:
@@ -18,7 +18,7 @@ jobs:
     steps:
       - run: echo test
   job3:
-    name: Test de charge
+    name: Loading Testing
     needs: job1
     runs-on: ubuntu-latest
     environment:
