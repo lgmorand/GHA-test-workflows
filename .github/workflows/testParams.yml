@@ -1,4 +1,4 @@
-name: My workflow with params
+name: my workflow with params
 on:
   workflow_dispatch:
     inputs:
