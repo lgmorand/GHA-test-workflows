@@ -1,5 +1,5 @@
 
-name: Nuget Package
+name: nuget Package
 
 on:
   workflow_dispatch:
