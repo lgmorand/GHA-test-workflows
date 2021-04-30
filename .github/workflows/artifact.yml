@@ -1,5 +1,5 @@
 
-name: Artifact
+name: artifact
 
 on:
   workflow_dispatch:
