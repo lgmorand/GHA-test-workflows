@@ -1,4 +1,4 @@
-name: TestWkf
+name: testWkf
 
 # Controls when the action will run. 
 on:
