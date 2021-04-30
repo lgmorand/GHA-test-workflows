@@ -1,4 +1,4 @@
-name: Units tests splitted
+name: units tests splitted
 on:
 
   workflow_dispatch:
