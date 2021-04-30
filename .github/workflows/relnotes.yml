@@ -1,0 +1,15 @@
+name: relnotes
+
+on:
+  workflow_dispatch:
+
+jobs:
+  build:
+    runs-on: ubuntu-latest
+
+    steps:
+    - name: "Build Changelog"
+      id: build_changelog
+      uses: mikepenz/release-changelog-builder-action@1
+      env:
+        GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
