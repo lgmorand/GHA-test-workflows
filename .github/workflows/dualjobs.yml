@@ -1,4 +1,4 @@
-name: Dual jobs
+name: dual jobs
 on:
   workflow_dispatch:
 
