@@ -1,4 +1,4 @@
-name: Multienv
+name: multienv
 
 on:
   workflow_dispatch:
