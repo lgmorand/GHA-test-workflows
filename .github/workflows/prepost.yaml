@@ -1,4 +1,4 @@
-name: CI
+name: PrePost
 
 on:
   workflow_dispatch:
