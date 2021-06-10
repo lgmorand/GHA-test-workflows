@@ -1,0 +1,30 @@
+# This is a basic workflow to help you get started with Actions
+
+name: toto
+
+# Controls when the action will run. 
+on:
+  # Triggers the workflow on push or pull request events but only for the main branch
+  push:
+    branches: [ main ]
+  pull_request:
+    branches: [ main ]
+
+  workflow_dispatch:
+jobs:
+  # This workflow contains a single job called "build"
+  job1:
+    runs-on: ubuntu-latest
+    steps:
+      - run: echo Hello
+  job2:
+    runs-on: ubuntu-latest
+    needs: job1
+    steps:
+      - run: echo world!
+  job3:
+    runs-on: ubuntu-latest
+    needs: job2
+    if: failure()
+    steps:
+      - run: echo les loulous!
