@@ -28,7 +28,7 @@ jobs:
     steps:
       - run: |
          echo "::error::ttu"
-         echo ca marche pas
+         vincent
   job3:
     runs-on: ubuntu-latest
     needs: [job2, job4]
