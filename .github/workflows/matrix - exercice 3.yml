@@ -12,4 +12,4 @@ jobs:
         server: [prod1, prod2, prod3, prod4, prod5, prod6, prod7, prod8]
     steps:
       - name: Deploy application
-        run: "Deploy on ${{ matrix.server}}"
+        run: echo "Deploy on ${{ matrix.server}}"
