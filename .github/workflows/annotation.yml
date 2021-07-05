@@ -18,5 +18,5 @@ jobs:
 
     # Steps represent a sequence of tasks that will be executed as part of the job
     steps:
-      - run: echo "::warning::test"
+      - run: echo "::warning::This Action is deprecated. Please use the official one editor/new-action@v1"
 
