@@ -18,5 +18,6 @@ jobs:
 
     # Steps represent a sequence of tasks that will be executed as part of the job
     steps:
-      - run: | echo '::error::mon message d''erreur'
+      - run: | 
+               echo '::error::mon message d''erreur'
                echo '::warning::mon message d''avertissement'
