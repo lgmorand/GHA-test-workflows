@@ -22,7 +22,7 @@ jobs:
         github-token: ${{secrets.MY_GITHUB_TOKEN}}
         script: |
           github.rest.repos.listForUser({
-            "lgmorand"
+            username : "lgmorand"
           });
     - uses: actions/github-script@v6
       with:
