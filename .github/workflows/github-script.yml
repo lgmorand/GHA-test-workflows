@@ -16,6 +16,14 @@ jobs:
           return "Hello!"
     - name: Get result
       run: echo "${{steps.set-result.outputs.result}}"
+    
+    - uses: actions/github-script@v6
+      with:
+        github-token: ${{secrets.MY_GITHUB_TOKEN}}
+        script: |
+          github.rest.repos.listForUser({
+            "lgmorand"
+          });
     - uses: actions/github-script@v6
       with:
         github-token: ${{secrets.GITHUB_TOKEN}}
@@ -25,10 +33,3 @@ jobs:
             repo: context.repo.repo,
             title: "🎉 You've created this issue using GitHub Script!!!"
           })
-    - uses: actions/github-script@v6
-      with:
-        github-token: ${{secrets.MY_GITHUB_TOKEN}}
-        script: |
-          octokit.rest.repos.listForUser({
-            "lgmorand"
-          });
