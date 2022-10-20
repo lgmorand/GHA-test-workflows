@@ -13,3 +13,8 @@ jobs:
     - id: monStep2
       run: echo "NOMVARIABLE=hello" >> $GITHUB_OUTPUT
     - run: echo ${{ steps.monStep2.outputs.NOMVARIABLE }}
+    - id: monStep3
+      run: |
+            COUNT=2
+            echo "filesCount=$(echo $COUNT)"  >> $GITHUB_OUTPUT
+    - run: echo ${{ steps.monStep3.outputs.filesCount }}
