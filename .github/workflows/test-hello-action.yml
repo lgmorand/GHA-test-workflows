@@ -1,0 +1,12 @@
+name: test Hello Action
+on:
+  workflow_dispatch:
+
+jobs:
+  job1:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: lgmorand/github-action-hello@v2
+        with:
+          firstname: jean
+          firstname2: marie
