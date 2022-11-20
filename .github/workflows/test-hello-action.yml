@@ -10,3 +10,7 @@ jobs:
         with:
           firstname: jean
           firstname2: marie
+      - uses: lgmorand/github-action-hello@v1
+        with:
+          firstname: jean
+          firstname2: marie
