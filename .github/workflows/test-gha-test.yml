@@ -9,3 +9,4 @@ jobs:
       - uses: lgmorand/github-action-test@v1
       - uses: lgmorand/github-action-test@v1.1
       - uses: lgmorand/github-action-test@v2
+      - uses: lgmorand/github-action-test@1
