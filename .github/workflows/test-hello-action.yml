@@ -6,11 +6,11 @@ jobs:
   job1:
     runs-on: ubuntu-latest
     steps:
-      - uses: lgmorand/github-action-hello@v2
+      - uses: lgmorand/github-action-hello2@v2
         with:
           firstname: jean
           firstname2: marie
-      - uses: lgmorand/github-action-hello@v1
+      - uses: lgmorand/github-action-hello2@v1
         with:
           firstname: jean
           firstname2: marie
