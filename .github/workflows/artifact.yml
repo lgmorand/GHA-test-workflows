@@ -20,7 +20,7 @@ jobs:
         path: 7z1900.msi # prend et zip un fichier particulier
         name: Release             # et l'upload en tant que Release.zip
      - name: Archivage des logs techniques
-       uses: actions/upload-artifact@v3
+       uses: actions/upload-artifact@v4
        with:
         path: logs               # prend tous les fichiers du dossier logs
         name: logs                # et les upload dans un fichier logs.zip
@@ -29,7 +29,7 @@ jobs:
     needs: build
     steps:
     - name: Téléchargement de l'artéfact
-      uses: actions/download-artifact@v3
+      uses: actions/download-artifact@v4
       with:
        name: logs
     - run: ls
