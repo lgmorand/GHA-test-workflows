@@ -15,7 +15,7 @@ jobs:
         cd logs
         wget https://download.xnview.com/XnViewMP-win.exe
      - name: Archivage des binaires de l'application
-       uses: actions/upload-artifact@v3
+       uses: actions/upload-artifact@v4
        with: 
         path: 7z1900.msi # prend et zip un fichier particulier
         name: Release             # et l'upload en tant que Release.zip
